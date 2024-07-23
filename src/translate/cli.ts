@@ -85,5 +85,16 @@ export const argv: Arguments = yargs(process.argv.slice(2))
       description: 'Number of spaces to use when generating output JSON files.',
       default: 2,
     },
+    context: {
+      type: 'string',
+      alias: 'x',
+      description: 'Context for the translation',
+    },
+    formality: {
+      type: 'string',
+      alias: 'm',
+      description: 'Formality for the translation',
+      choices: ['default', 'more', 'less', 'prefer_more', 'prefer_less'],
+    },
   })
   .parseSync();

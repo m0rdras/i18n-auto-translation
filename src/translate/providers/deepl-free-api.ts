@@ -28,6 +28,8 @@ export class DeepLFreeAPI extends Translate {
         target_lang: argv.to,
         source_lang: argv.from,
         preserve_formatting: true,
+        formality: argv.formality,
+        context: argv.context,
       },
       DeepLFreeAPI.axiosConfig,
     );
